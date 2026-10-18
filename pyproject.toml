@@ -1,0 +1,23 @@
+[project]
+name = "retail-copilot"
+version = "0.1.0"
+description = "A learning-oriented Retail Intelligence Copilot"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit",
+    "python-dotenv",
+    "langchain-core>=1,<2",
+    "tiktoken>=0.12,<1",
+    "pyyaml>=6,<7",
+    "openai>=3.31.0",
+    "pinecone>=10,<11",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13"]
+build-backend = "uv_build"
+
+[project.scripts]
+retail-validate = "retail_copilot.documents:main"
+retail-check = "retail_copilot.readiness:main"

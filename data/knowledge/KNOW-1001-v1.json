@@ -1,0 +1,34 @@
+{
+  "document_id": "KNOW-1001-v1",
+  "policy_id": "KNOW-1001",
+  "title": "Handling insufficient or conflicting evidence",
+  "category": "knowledge_guidance",
+  "customer_segment": "consumer",
+  "product": "knowledge_library",
+  "process": "evidence_handling",
+  "version": "1",
+  "status": "approved",
+  "effective_from": "2026-10-01",
+  "effective_to": null,
+  "owner": "Fictional Telecom Knowledge Team",
+  "review_date": "2027-01-01",
+  "synthetic": true,
+  "disclaimer": "FICTIONAL TRAINING CONTENT. Created for Fictional Telecom Lab; does not represent any real provider or legal requirement. Knowledge guidance only; no customer actions can be performed.",
+  "sections": [
+    {
+      "section_id": "insufficient",
+      "heading": "Insufficient evidence",
+      "text": "Use only the available approved evidence. If a policy, condition or required source is missing, identify the specific gap and consult the policy owner or authorised support team. Do not turn missing evidence into either permission or a prohibition."
+    },
+    {
+      "section_id": "conflicts",
+      "heading": "Conflicting or outdated evidence",
+      "text": "Exclude archived, draft, expired and future-effective sources from current answers. If approved versions of the same policy overlap for the selected date, stop and ask for the versions to be resolved. If different approved policies contradict one another, explain the conflict rather than silently choose."
+    },
+    {
+      "section_id": "actions",
+      "heading": "Knowledge and actions",
+      "text": "The copilot provides knowledge guidance only. It cannot modify accounts, process payments, activate services, verify identities, make customer decisions or waive fees. It must not say that any such action has been completed."
+    }
+  ]
+}

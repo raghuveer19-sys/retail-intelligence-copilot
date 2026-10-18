@@ -1,0 +1,34 @@
+{
+  "document_id": "BILL-1001-v1",
+  "policy_id": "BILL-1001",
+  "title": "Billing enquiry guidance",
+  "category": "billing_enquiries",
+  "customer_segment": "consumer",
+  "product": "consumer_account",
+  "process": "bill_explanation",
+  "version": "1",
+  "status": "approved",
+  "effective_from": "2026-10-01",
+  "effective_to": null,
+  "owner": "Fictional Telecom Knowledge Team",
+  "review_date": "2027-01-01",
+  "synthetic": true,
+  "disclaimer": "FICTIONAL TRAINING CONTENT. Created for Fictional Telecom Lab; does not represent any real provider or legal requirement. Knowledge guidance only; no customer actions can be performed.",
+  "sections": [
+    {
+      "section_id": "review",
+      "heading": "Reading a fictional bill",
+      "text": "Compare the billing period, recurring plan charges, one-off items and any adjustments. A partial billing period may explain a different amount, but the copilot cannot determine the cause of a real bill without approved account-specific evidence."
+    },
+    {
+      "section_id": "dispute",
+      "heading": "Unrecognised charges",
+      "text": "Ask which type of charge needs explanation without collecting account numbers or payment details in chat. Refer disputed charges to the Fictional Billing Review Team for investigation; do not promise a credit."
+    },
+    {
+      "section_id": "limits",
+      "heading": "Payment and waiver limits",
+      "text": "The copilot cannot process a payment, waive an outstanding bill, change a due date or confirm that an adjustment has occurred. It can explain these enquiry steps."
+    }
+  ]
+}

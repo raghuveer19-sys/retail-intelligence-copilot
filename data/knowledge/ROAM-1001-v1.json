@@ -1,0 +1,34 @@
+{
+  "document_id": "ROAM-1001-v1",
+  "policy_id": "ROAM-1001",
+  "title": "International roaming preparation",
+  "category": "international_roaming",
+  "customer_segment": "consumer",
+  "product": "mobile_plan",
+  "process": "travel_preparation",
+  "version": "1",
+  "status": "approved",
+  "effective_from": "2026-10-01",
+  "effective_to": null,
+  "owner": "Fictional Telecom Knowledge Team",
+  "review_date": "2027-01-01",
+  "synthetic": true,
+  "disclaimer": "FICTIONAL TRAINING CONTENT. Created for Fictional Telecom Lab; does not represent any real provider or legal requirement. Knowledge guidance only; no customer actions can be performed.",
+  "sections": [
+    {
+      "section_id": "before_travel",
+      "heading": "Before travel",
+      "text": "Check that the destination is included in the selected plan, that the device is compatible, and that roaming settings and any spending controls are understood before travel. This library contains no destination eligibility list or country-specific price table."
+    },
+    {
+      "section_id": "charges",
+      "heading": "Charges and usage",
+      "text": "Roaming usage may differ from domestic allowances. Consult an approved destination and plan price source before quoting any charge; do not infer that roaming is included in PLAN-1001. Wi-Fi use does not establish that mobile roaming is switched off."
+    },
+    {
+      "section_id": "limits",
+      "heading": "Support boundaries",
+      "text": "The copilot cannot enable roaming, view live usage or guarantee service availability overseas. Refer account-specific changes to the authorised support team."
+    }
+  ]
+}

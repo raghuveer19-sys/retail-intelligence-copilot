@@ -1,0 +1,19 @@
+[browser]
+gatherUsageStats = false
+
+[server]
+address = "127.0.0.1"
+# Keep the same process for ordinary source edits so session history can survive reruns.
+fileWatcherType = "poll"
+runOnSave = true
+# Give a temporarily disconnected browser 15 minutes to reconnect to its session.
+# This does not persist chats across process restarts or new browser sessions.
+disconnectedSessionTTL = 900
+
+[theme]
+base = "light"
+primaryColor = "#08776f"
+backgroundColor = "#f7f9fb"
+secondaryBackgroundColor = "#edf5f5"
+textColor = "#18333d"
+font = "sans serif"

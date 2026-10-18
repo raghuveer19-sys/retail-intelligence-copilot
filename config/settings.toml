@@ -1,0 +1,130 @@
+[demo]
+retailer_name = "Fictional Telecom Lab"
+# Fixed demo date makes the lesson and tests reproducible.
+as_of_date = "2026-10-15"
+knowledge_directory = "data/knowledge"
+
+# Chat memory interprets follow-ups; previous assistant text is never policy evidence.
+[conversation]
+max_history_turns = 3
+max_question_characters = 1000
+max_history_characters = 4000
+max_display_turns = 30
+
+# The terminal command uses saved evidence; chat supplies freshly retrieved evidence.
+[generation]
+provider = "ollama"
+model = "qwen3:4b-instruct"
+api_base_url = "http://127.0.0.1:11434"
+timeout_seconds = 300
+num_ctx = 16384
+# Includes any internal thinking tokens, which are never saved or displayed.
+num_predict = 1024
+temperature = 0
+template_reserve_tokens = 4608
+# Official Qwen model card confirms non-thinking mode; installed Ollama metadata omits its controls.
+thinking_when_metadata_missing = false
+output_file = "data/processed/generation-instruct-example.json"
+
+[embedding]
+provider = "ollama"
+model = "embeddinggemma:300m"
+dimensions = 768
+max_input_tokens = 2048
+api_base_url = "http://127.0.0.1:11434"
+timeout_seconds = 120
+# Model-specific retrieval prompts; preserve the original passage separately.
+document_template = "title: {title} | text: {text}"
+query_template = "task: search result | query: {text}"
+
+# Retained comparison lesson, not the active embedding choice.
+[openai_embedding]
+provider = "openai"
+model = "text-embedding-3-small"
+# Official specifications checked 2026-10-15; enforced by the local token_report command.
+# The proposed embedding input is each chunk's page_content, without added metadata.
+dimensions = 1536
+tokenizer_encoding = "cl100k_base"
+max_input_tokens = 8192
+# Used only by explicitly enabled live requests; no automatic retries in this lesson.
+api_base_url = "https://api.openai.com/v1"
+timeout_seconds = 30
+
+[embedding_example]
+chunk_id = "AUTH-1001-v1:delegation:section-v1"
+output_file = "data/processed/embedding-example.json"
+
+[ollama_example]
+chunk_id = "AUTH-1001-v1:delegation:section-v1"
+output_file = "data/processed/ollama-embedding-example.json"
+
+[embedding_preparation]
+output_file = "data/processed/embedding-corpus.json"
+
+[retrieval]
+provider = "pinecone"
+index_name = "retail-copilot-week2"
+# Corpus boundary; configuration alone does not create a resource.
+namespace = "telecom-demo-v1"
+metric = "cosine"
+top_k = 4
+cloud = "aws"
+region = "us-east-1"
+vector_field = "embedding"
+request_timeout_seconds = 30
+
+[retrieval_example]
+question = "Do I need an appointment for a physical SIM replacement?"
+output_file = "data/processed/retrieval-example.json"
+baseline_case_ids = ["E01", "E04", "E06"]
+baseline_output_file = "data/processed/retrieval-baseline.json"
+
+[pinecone_ingestion]
+report_file = "data/processed/pinecone-indexing-report.json"
+request_timeout_seconds = 30
+verification_attempts = 10
+verification_interval_seconds = 2
+
+# Opt-in via --follow-references. Never follow references recursively.
+[policy_lookup]
+max_policies = 2
+max_added_chunks = 6
+output_file = "data/processed/retrieval-policy-lookup-example.json"
+baseline_output_file = "data/processed/retrieval-policy-lookup-baseline.json"
+
+# Offline evidence-pack lesson. Character limits are not model token limits.
+[context]
+input_file = "data/processed/retrieval-policy-lookup-baseline.json"
+case_id = "E04"
+max_sources = 10
+max_characters = 12000
+output_file = "data/processed/context-example.json"
+
+# Model-independent instructions and draft checks, also used by generation.
+[answering]
+input_file = "data/processed/context-example.json"
+# The model selects evidence; the app preserves its whole approved passages.
+system_prompt_file = "prompts/answering-grounded-v2.md"
+presentation = "source_passages"
+output_file = "data/processed/answering-preview.json"
+max_draft_characters = 8000
+max_claims = 6
+max_claim_characters = 800
+
+# Local comparison only. These small teaching sizes are not ingestion defaults.
+[chunking_experiment]
+document_id = "AUTH-1001-v1"
+section_id = "delegation"
+words_per_chunk = 20
+overlap_words = 5
+
+# Local preparation baseline; run token_report separately to check per-input token limits.
+[chunk_preparation]
+strategy = "section-v1"
+output_file = "data/processed/chunks.json"
+
+# Presentation labels only. The approved policy text and indexed names stay unchanged.
+# Questions are normalized before retrieval; final chat text uses these display names.
+[plan_aliases]
+"Practice Basic" = "Connect Essential"
+"Practice Plus" = "Connect Plus"

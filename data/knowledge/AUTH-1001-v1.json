@@ -1,0 +1,34 @@
+{
+  "document_id": "AUTH-1001-v1",
+  "policy_id": "AUTH-1001",
+  "title": "Account ownership and authority",
+  "category": "account_authority",
+  "customer_segment": "consumer",
+  "product": "consumer_account",
+  "process": "authority_checks",
+  "version": "1",
+  "status": "approved",
+  "effective_from": "2026-10-01",
+  "effective_to": null,
+  "owner": "Fictional Telecom Knowledge Team",
+  "review_date": "2027-01-01",
+  "synthetic": true,
+  "disclaimer": "FICTIONAL TRAINING CONTENT. Created for Fictional Telecom Lab; does not represent any real provider or legal requirement. Knowledge guidance only; no customer actions can be performed.",
+  "sections": [
+    {
+      "section_id": "roles",
+      "heading": "Account roles",
+      "text": "For this fictional consumer service, an account holder may request a SIM replacement after the required checks. A secondary contact listed for billing discussions has billing-enquiry scope only; that label alone does not establish permission to request a SIM replacement."
+    },
+    {
+      "section_id": "delegation",
+      "heading": "Delegated SIM authority",
+      "text": "A delegate may request a SIM replacement only when an authorised colleague confirms an active delegation record that explicitly includes SIM replacement and completes the IDV-1001 identity checks. The copilot cannot inspect delegation records or decide whether a real person satisfies these conditions."
+    },
+    {
+      "section_id": "missing",
+      "heading": "Missing authority evidence",
+      "text": "If the delegation scope or applicable authority policy is unavailable, state that permission cannot be confirmed from the evidence and refer to the Fictional Account Authority Team. Missing evidence is not proof of permission or a prohibition."
+    }
+  ]
+}

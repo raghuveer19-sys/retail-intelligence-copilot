@@ -1,0 +1,24 @@
+{
+  "document_id": "SIM-1024-v1",
+  "policy_id": "SIM-1024",
+  "title": "SIM replacement (archived)",
+  "category": "sim_replacement",
+  "customer_segment": "consumer",
+  "product": "physical_sim",
+  "process": "sim_replacement",
+  "version": "1",
+  "status": "archived",
+  "effective_from": "2026-01-01",
+  "effective_to": "2026-09-30",
+  "owner": "Fictional Telecom Knowledge Team",
+  "review_date": "2026-09-01",
+  "synthetic": true,
+  "disclaimer": "FICTIONAL TRAINING CONTENT. Created for Fictional Telecom Lab; does not represent any real provider or legal requirement. Knowledge guidance only; no customer actions can be performed.",
+  "sections": [
+    {
+      "section_id": "appointments",
+      "heading": "Former appointment rule",
+      "text": "This archived fictional version required an appointment for a physical SIM replacement. It was superseded from 2026-10-01 by SIM-1024-v2, where appointments are optional. Retained only for testing outdated evidence; never use as current guidance."
+    }
+  ]
+}

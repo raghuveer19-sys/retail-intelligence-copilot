@@ -1,0 +1,34 @@
+{
+  "document_id": "PLAN-1001-v1",
+  "policy_id": "PLAN-1001",
+  "title": "Fictional consumer plan comparison",
+  "category": "mobile_plans",
+  "customer_segment": "consumer",
+  "product": "mobile_plan",
+  "process": "plan_comparison",
+  "version": "1",
+  "status": "approved",
+  "effective_from": "2026-10-01",
+  "effective_to": null,
+  "owner": "Fictional Telecom Knowledge Team",
+  "review_date": "2027-01-01",
+  "synthetic": true,
+  "disclaimer": "FICTIONAL TRAINING CONTENT. Created for Fictional Telecom Lab; does not represent any real provider or legal requirement. Knowledge guidance only; no customer actions can be performed.",
+  "sections": [
+    {
+      "section_id": "allowances",
+      "heading": "Illustrative allowances",
+      "text": "The fictional Practice Basic plan includes 10 GB of domestic data per monthly cycle. Practice Plus includes 30 GB per monthly cycle. These are invented teaching examples, not commercial offers; no monthly prices are defined in this knowledge base."
+    },
+    {
+      "section_id": "scope",
+      "heading": "Plan scope",
+      "text": "These examples cover consumer plans only. They do not specify business accounts, roaming entitlements, excess-data prices or promotional discounts. Ask which plan and allowance the user wants to compare."
+    },
+    {
+      "section_id": "limits",
+      "heading": "Plan changes",
+      "text": "The copilot can explain the two stated allowances. It cannot change a plan, check a customer's balance or guarantee eligibility for an offer."
+    }
+  ]
+}

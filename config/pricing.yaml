@@ -1,0 +1,140 @@
+schema_version: 1
+checked_on: "2026-10-15"
+currency: USD
+account_plan_verified: false
+# Paid OpenAI live mode requires this flag, --live, an allowance and a key.
+# Local Ollama inference has no external API charge and does not enable paid use.
+paid_service_use_enabled: false
+
+pinecone:
+  checked_on: "2026-10-18"
+  intended_plan: Starter
+  user_reported_plan: Starter
+  user_reported_on: "2026-10-15"
+  credits_status: "Builder credits pending; not assumed active. Account plan/quota not independently inspected."
+  public_plan_description: "Free within plan limits; confirm account plan and limits before use."
+  monthly_plan_fee_usd: 0
+  authentication_verified_on: "2026-10-15"
+  indexing_verified_on: "2026-10-15"
+  public_starter_allowances:
+    indexes: 5
+    storage_gb: 2
+    monthly_write_units: 2000000
+    monthly_read_units: 1000000
+    monthly_egress_gb: 1
+  actual_remaining_allowance: null
+  current_chat_evaluation:
+    checked_on: "2026-10-18"
+    case_ids: [E01, E05, E07, E08, E09]
+    artifact_directory: "data/processed/chat-evaluation-2026-10-18"
+    cases_with_retrieval: 3
+    reported_read_units: 6
+    query_input_tokens_local: 63
+    generation_input_tokens_local: 6058
+    generation_output_tokens_local: 328
+    resolution_tokens: null
+    elapsed_seconds: 284.340268
+    actual_charge_usd: null
+    qualifications: "Fresh chat-path evaluation. Two cases returned clarification before retrieval. Resolver tokens were not reported; null is not zero. Read units are usage, not an invoice; account allowance was not inspected."
+  demo_verification_usage:
+    recorded_on: "2026-10-19"
+    report: "data/processed/demo-verification-usage-2026-10-19.json"
+    reported_read_units_subtotal: 35
+    query_input_tokens_local_subtotal: 415
+    generation_input_tokens_local_subtotal: 27202
+    generation_output_tokens_local_subtotal: 2322
+    resolution_input_tokens_reported_subtotal: 1376
+    resolution_output_tokens_reported_subtotal: 66
+    complete_total: null
+    actual_charge_usd: null
+    qualifications: "Six named verification artifact groups only; earlier baselines and prompt trials excluded. Failed/absent measurements remain unknown. Replays incur no new service usage. No pricing re-verification, plan change or invoice reconciliation."
+  first_upload_verification_fetch_read_units: 4
+  retrieval_baseline_checked_on: "2026-10-17"
+  retrieval_baseline_search_count: 3
+  retrieval_baseline_reported_read_units: 3
+  retrieval_top_k_experiment:
+    checked_on: "2026-10-17"
+    experimental_top_k: 8
+    search_count: 3
+    reported_search_read_units: 3
+    reported_diagnostic_fetch_read_units: 1
+    default_top_k_changed: false
+  semantic_search_metering:
+    read_units_per_namespace_gb: 1
+    minimum_read_units_per_search: 0.25
+    note: "Published formula; record actual response usage. The first three searches each reported 1 RU."
+  policy_lookup_experiment:
+    checked_on: "2026-10-17"
+    search_count: 3
+    fetch_count: 3
+    reported_search_read_units: 3
+    reported_fetch_read_units: 3
+    fetched_record_counts: [4, 4, 1]
+    query_input_tokens_local: 66
+    opt_in: true
+    actual_charge_usd: null
+  fetch_metering:
+    records_per_read_unit: 10
+    minimum_read_units_per_request: 1
+    rounding: up
+    checked_on: "2026-10-17"
+  source: "https://www.pinecone.io/pricing/"
+  limits_source: "https://docs.pinecone.io/reference/api/database-limits/rate-limits"
+  metering_source: "https://docs.pinecone.io/guides/manage-cost/understanding-cost"
+  paid_unit_rates_status: "Not verified for a selected paid plan. Null does not mean free."
+  usd_per_million_read_units: null
+  usd_per_million_write_units: null
+  usd_per_gb_month_storage: null
+  usd_per_gb_egress: null
+
+openai_candidates:
+  status: "One-chunk embedding integration implemented with local tests; live access unverified. Generation remains a candidate."
+  checked_on: "2026-10-15"
+  embedding:
+    model: text-embedding-3-small
+    selection_status: "Retained comparison baseline; active embeddings now use local Ollama. No OpenAI API calls made."
+    checked_on: "2026-10-15"
+    billing_mode: standard
+    usd_per_million_input_tokens: 0.02
+    source: "https://developers.openai.com/api/docs/models/text-embedding-3-small"
+    qualifications: "Public USD input-token rate; excludes tax and currency conversion. Actual account billing and access remain unverified."
+  generation:
+    model: gpt-6-luna
+    service_tier: standard
+    context_price_band: short
+    usd_per_million_input_tokens: 0.10
+    usd_per_million_output_tokens: 0.50
+    source: "https://developers.openai.com/api/docs/pricing"
+    qualifications: "Uncached base token rates; exclude tax, currency conversion and optional services. Confirm billable output/reasoning tokens, context tier and account access before use."
+
+local_embedding:
+  provider: ollama
+  model: "embeddinggemma:300m"
+  checked_on: "2026-10-15"
+  external_api_charge_usd: 0
+  local_hardware_electricity_network_cost: null
+  source: "https://ollama.com/library/embeddinggemma"
+  qualifications: "Local inference only; model download is about 622 MB. Hardware, storage, electricity and network costs are unmeasured. Pinecone costs are separate."
+
+local_generation:
+  provider: ollama
+  model: "qwen3:4b-instruct"
+  checked_on: "2026-10-18"
+  external_api_charge_usd: 0
+  local_hardware_electricity_cost_usd: null
+  model_download_megabytes_approx: 2500
+  model_source: "https://ollama.com/library/qwen3:4b-instruct"
+  comparison_model: "qwen2.5:1.5b"
+  comparison_model_download_megabytes_approx: 986
+  comparison_model_source: "https://ollama.com/library/qwen2.5:1.5b"
+  source: "https://docs.ollama.com/api/chat"
+  qualifications: "Installed model, loopback-only inference, no cloud-backed model. Per-run token usage and timing are recorded separately. No new Pinecone request when using saved context. This is not a total operating-cost estimate."
+
+hosting:
+  planned_mode: local
+  hosted_service_rates: null
+
+notes:
+  - "This file records assumptions and verified public plan information; it is not an account quote."
+  - "token_report estimates one corpus embedding pass from local token counts; it does not measure a bill or enforce external spending."
+  - "Review prices, quotas and the actual account plan before creating an index or making service calls."

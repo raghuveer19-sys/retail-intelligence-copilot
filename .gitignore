@@ -1,0 +1,18 @@
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+build/
+dist/
+*.egg-info/
+.coverage
+htmlcov/
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.log
+# Recreated from the versioned fictional source documents.
+data/processed/

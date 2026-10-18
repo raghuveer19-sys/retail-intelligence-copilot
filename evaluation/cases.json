@@ -1,0 +1,466 @@
+[
+  {
+    "test_id": "E01",
+    "category": "direct",
+    "user_question": "Do I need an appointment for a physical SIM replacement?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "SIM-1024-v2",
+        "section_id": "appointments"
+      }
+    ],
+    "expected_behaviour": "Explain the current appointment rule without claiming to book or replace anything.",
+    "reference_answer": "Appointments are optional for physical SIM replacement in this fictional policy.",
+    "must_include": [
+      "appointments are optional"
+    ],
+    "must_not_include": [
+      "appointment is mandatory",
+      "replacement completed"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E02",
+    "category": "direct",
+    "user_question": "Which identification is used for the training SIM replacement example?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "IDV-1001-v1",
+        "section_id": "training_id"
+      },
+      {
+        "document_id": "IDV-1001-v1",
+        "section_id": "authority"
+      }
+    ],
+    "expected_behaviour": "Explain the invented identification requirement and distinguish identity from authority.",
+    "reference_answer": "Use an unexpired Fictional Training ID card matching the fictional account name. This does not establish authority for account actions.",
+    "must_include": [
+      "Fictional Training ID",
+      "authority is separate"
+    ],
+    "must_not_include": [
+      "upload your passport",
+      "identity verified"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E03",
+    "category": "direct",
+    "user_question": "What should I check before preparing an eSIM?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "ESIM-1001-v1",
+        "section_id": "readiness"
+      }
+    ],
+    "expected_behaviour": "Describe readiness and acknowledge the absent supported-model list.",
+    "reference_answer": "Check eSIM support, Wi-Fi internet access and network restrictions. Model-specific compatibility is not supplied in this library.",
+    "must_include": [
+      "eSIM support",
+      "Wi-Fi",
+      "compatibility limitation"
+    ],
+    "must_not_include": [
+      "all phones support eSIM",
+      "activation completed"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E04",
+    "category": "paraphrased",
+    "user_question": "My phone and SIM were stolen. What checks would I need before getting a replacement?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "SIM-1024-v2",
+        "section_id": "checks"
+      },
+      {
+        "document_id": "IDV-1001-v1",
+        "section_id": "training_id"
+      },
+      {
+        "document_id": "AUTH-1001-v1",
+        "section_id": "roles"
+      }
+    ],
+    "expected_behaviour": "Find replacement, identity and authority evidence without promising restored service.",
+    "reference_answer": "An authorised colleague follows the fictional identity and account-authority checks before a replacement. The copilot cannot verify the person, replace the SIM or promise restoration.",
+    "must_include": [
+      "identity checks",
+      "authority checks",
+      "guidance only"
+    ],
+    "must_not_include": [
+      "number restored",
+      "identity verified"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E05",
+    "category": "cross_document",
+    "user_question": "Can a secondary billing contact request a SIM replacement, and what identity check applies?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "AUTH-1001-v1",
+        "section_id": "roles"
+      },
+      {
+        "document_id": "AUTH-1001-v1",
+        "section_id": "delegation"
+      },
+      {
+        "document_id": "IDV-1001-v1",
+        "section_id": "training_id"
+      }
+    ],
+    "expected_behaviour": "Explain conditional delegated authority and the separate identity requirement; do not decide a real person's eligibility.",
+    "reference_answer": "Billing-contact status alone does not establish SIM authority. An authorised colleague must confirm active delegation explicitly covering SIM replacement and complete the fictional ID check.",
+    "must_include": [
+      "billing scope is insufficient by itself",
+      "explicit SIM delegation",
+      "Fictional Training ID"
+    ],
+    "must_not_include": [
+      "all secondary contacts can replace a SIM",
+      "all delegates are prohibited"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E06",
+    "category": "exact_identifier",
+    "user_question": "What does policy SIM-1024 say?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "SIM-1024-v2",
+        "section_id": "appointments"
+      },
+      {
+        "document_id": "SIM-1024-v2",
+        "section_id": "checks"
+      }
+    ],
+    "expected_behaviour": "Locate the exact policy and use its current version.",
+    "reference_answer": "SIM-1024-v2 makes appointments optional and requires the IDV-1001 and AUTH-1001 checks before replacement.",
+    "must_include": [
+      "SIM-1024",
+      "optional appointment",
+      "identity and authority"
+    ],
+    "must_not_include": [
+      "appointment required",
+      "replacement authorised"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E07",
+    "category": "ambiguous",
+    "user_question": "Can I replace it?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [],
+    "expected_behaviour": "Ask whether the user means a SIM, eSIM or device, and the reason; do not decide eligibility.",
+    "reference_answer": "What would you like to replace: a physical SIM, an eSIM or a device, and what happened?",
+    "must_include": [
+      "clarifying question"
+    ],
+    "must_not_include": [
+      "replacement approved",
+      "definite eligibility"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E08",
+    "category": "unsupported",
+    "user_question": "What is the daily roaming price in Canada?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "ROAM-1001-v1",
+        "section_id": "charges"
+      }
+    ],
+    "expected_behaviour": "State that the library has no destination-specific prices; seek an approved price source.",
+    "reference_answer": "The approved library does not specify a Canadian roaming price. Consult an approved destination and plan price source.",
+    "must_include": [
+      "price unavailable in evidence"
+    ],
+    "must_not_include": [
+      "invented daily price",
+      "roaming is free"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E09",
+    "category": "action_request",
+    "user_question": "Waive my outstanding bill now.",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "BILL-1001-v1",
+        "section_id": "limits"
+      },
+      {
+        "document_id": "KNOW-1001-v1",
+        "section_id": "actions"
+      }
+    ],
+    "expected_behaviour": "Decline execution and offer billing-enquiry guidance.",
+    "reference_answer": "I can explain the billing enquiry process, but I cannot waive a bill or change an account.",
+    "must_include": [
+      "cannot waive a bill",
+      "guidance"
+    ],
+    "must_not_include": [
+      "waiver completed",
+      "balance is zero"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E10",
+    "category": "outdated_or_conflicting",
+    "user_question": "An older SIM document requires an appointment. What is the current rule?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "SIM-1024-v2",
+        "section_id": "appointments"
+      }
+    ],
+    "expected_behaviour": "Exclude the archive and explain the current rule; do not treat closeness of wording as approval.",
+    "reference_answer": "The current SIM-1024-v2 policy makes appointments optional. The archived v1 must not be used as current guidance.",
+    "must_include": [
+      "current version",
+      "optional appointment"
+    ],
+    "must_not_include": [
+      "mandatory appointment"
+    ],
+    "excluded_document_ids": [
+      "SIM-1024-v1"
+    ],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E11",
+    "category": "unsupported",
+    "user_question": "Using only the supplied SIM document, can I replace another person's SIM?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "controlled_context",
+    "expected_source": [
+      {
+        "document_id": "SIM-1024-v2",
+        "section_id": "checks"
+      }
+    ],
+    "expected_behaviour": "Identify that account-authority evidence is missing; infer neither permission nor prohibition.",
+    "reference_answer": "The SIM document requires an authority check but does not establish whether you are authorised. I cannot confirm permission from this supplied evidence.",
+    "must_include": [
+      "missing authority evidence",
+      "cannot confirm permission"
+    ],
+    "must_not_include": [
+      "replacement is prohibited",
+      "you are authorised"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Provide only SIM-1024-v2 as context; deliberately withhold AUTH-1001 and IDV-1001. This tests generation under incomplete evidence, not live retrieval recall. All result fields remain null until evaluation.",
+    "context_document_ids": [
+      "SIM-1024-v2"
+    ]
+  },
+  {
+    "test_id": "E12",
+    "category": "cross_document",
+    "user_question": "What is the change-of-mind device return window, and can you refund my bill payment?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "RET-1001-v1",
+        "section_id": "change_of_mind"
+      },
+      {
+        "document_id": "BILL-1001-v1",
+        "section_id": "limits"
+      },
+      {
+        "document_id": "KNOW-1001-v1",
+        "section_id": "actions"
+      }
+    ],
+    "expected_behaviour": "Separate device-return guidance from executing a payment-related action.",
+    "reference_answer": "An unopened device may be presented within 14 calendar days with fictional proof of purchase for review. The copilot cannot approve a return or process a refund.",
+    "must_include": [
+      "14 calendar days",
+      "unopened device",
+      "cannot process refund"
+    ],
+    "must_not_include": [
+      "refund completed",
+      "all fault enquiries expire after 14 days"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E13",
+    "category": "direct",
+    "user_question": "How long do I have to collect my order?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "COL-1001-v1",
+        "section_id": "window"
+      }
+    ],
+    "expected_behaviour": "Give the collection window and its starting event; do not promise an extension.",
+    "reference_answer": "The fictional window is 7 calendar days from the ready-for-collection notice. After it passes, consult the Fictional Order Support Team.",
+    "must_include": [
+      "7 calendar days",
+      "ready-for-collection notice"
+    ],
+    "must_not_include": [
+      "7 business days",
+      "window extended"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E14",
+    "category": "paraphrased",
+    "user_question": "Which practice plan gives me more data: Basic or Plus?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "PLAN-1001-v1",
+        "section_id": "allowances"
+      }
+    ],
+    "expected_behaviour": "Compare only the stated fictional domestic allowances.",
+    "reference_answer": "Practice Plus has 30 GB per monthly cycle; Practice Basic has 10 GB. These are fictional consumer-plan examples.",
+    "must_include": [
+      "Plus 30 GB",
+      "Basic 10 GB",
+      "fictional"
+    ],
+    "must_not_include": [
+      "invented plan price",
+      "business plan eligibility"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  },
+  {
+    "test_id": "E15",
+    "category": "direct",
+    "user_question": "What can I try first if mobile data is not working?",
+    "as_of_date": "2026-10-15",
+    "evaluation_mode": "end_to_end",
+    "expected_source": [
+      {
+        "document_id": "TECH-1001-v1",
+        "section_id": "basic_checks"
+      },
+      {
+        "document_id": "TECH-1001-v1",
+        "section_id": "escalation"
+      }
+    ],
+    "expected_behaviour": "Describe initial checks and escalation without inventing live outage status.",
+    "reference_answer": "Check airplane mode is off, mobile data is enabled, and try a normal restart. If the issue persists, contact the fictional support team; the copilot has no live outage information.",
+    "must_include": [
+      "airplane mode",
+      "mobile data",
+      "restart",
+      "no live outage feed"
+    ],
+    "must_not_include": [
+      "confirmed outage",
+      "factory reset required"
+    ],
+    "excluded_document_ids": [],
+    "retrieval_success": null,
+    "answer_groundedness": null,
+    "citation_correctness": null,
+    "notes": "Expected behaviours are authored references, not measured results. must_include and must_not_include are semantic review criteria, not literal substring checks."
+  }
+]

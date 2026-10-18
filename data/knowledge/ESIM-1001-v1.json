@@ -1,0 +1,34 @@
+{
+  "document_id": "ESIM-1001-v1",
+  "policy_id": "ESIM-1001",
+  "title": "eSIM activation preparation",
+  "category": "esim_activation",
+  "customer_segment": "consumer",
+  "product": "esim",
+  "process": "activation_preparation",
+  "version": "1",
+  "status": "approved",
+  "effective_from": "2026-10-01",
+  "effective_to": null,
+  "owner": "Fictional Telecom Knowledge Team",
+  "review_date": "2027-01-01",
+  "synthetic": true,
+  "disclaimer": "FICTIONAL TRAINING CONTENT. Created for Fictional Telecom Lab; does not represent any real provider or legal requirement. Knowledge guidance only; no customer actions can be performed.",
+  "sections": [
+    {
+      "section_id": "readiness",
+      "heading": "Device readiness",
+      "text": "Check that the device supports eSIM, has an internet connection through Wi-Fi, and is not restricted to an incompatible network. Exact device compatibility must be confirmed from approved model-specific guidance; this library contains no supported-model list."
+    },
+    {
+      "section_id": "handoff",
+      "heading": "Activation handoff",
+      "text": "An authorised colleague must complete the IDV-1001 and AUTH-1001 checks before issuing a fictional activation instruction through the approved service workflow. Do not post activation codes in the copilot. Avoid deleting an existing profile before the authorised colleague confirms the replacement process."
+    },
+    {
+      "section_id": "limits",
+      "heading": "Service limits",
+      "text": "The copilot can explain preparation steps. It cannot issue a QR code, activate a service, inspect a device, or confirm a customer's account eligibility."
+    }
+  ]
+}

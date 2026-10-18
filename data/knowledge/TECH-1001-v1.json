@@ -1,0 +1,34 @@
+{
+  "document_id": "TECH-1001-v1",
+  "policy_id": "TECH-1001",
+  "title": "Common connectivity troubleshooting",
+  "category": "device_troubleshooting",
+  "customer_segment": "consumer",
+  "product": "mobile_device",
+  "process": "connectivity_checks",
+  "version": "1",
+  "status": "approved",
+  "effective_from": "2026-10-01",
+  "effective_to": null,
+  "owner": "Fictional Telecom Knowledge Team",
+  "review_date": "2027-01-01",
+  "synthetic": true,
+  "disclaimer": "FICTIONAL TRAINING CONTENT. Created for Fictional Telecom Lab; does not represent any real provider or legal requirement. Knowledge guidance only; no customer actions can be performed.",
+  "sections": [
+    {
+      "section_id": "basic_checks",
+      "heading": "Initial checks",
+      "text": "For a fictional connectivity enquiry, check whether airplane mode is off, confirm mobile data is enabled if data is needed, and try a normal restart. Ask whether the issue affects calls, data, or both; do not claim these steps guarantee recovery."
+    },
+    {
+      "section_id": "escalation",
+      "heading": "If the issue persists",
+      "text": "Refer to the Fictional Technical Support Team if basic checks do not resolve the issue. The copilot has no live outage feed, remote diagnostics or account service status. Do not invent an outage or recommend an unexplained factory reset."
+    },
+    {
+      "section_id": "privacy",
+      "heading": "Information boundaries",
+      "text": "Use only a fictional device description and symptom for practice. Do not collect passwords, unlock codes, customer identifiers or personal device contents."
+    }
+  ]
+}

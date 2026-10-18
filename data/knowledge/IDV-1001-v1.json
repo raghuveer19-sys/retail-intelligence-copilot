@@ -1,0 +1,34 @@
+{
+  "document_id": "IDV-1001-v1",
+  "policy_id": "IDV-1001",
+  "title": "Fictional identity requirements",
+  "category": "identity_verification",
+  "customer_segment": "consumer",
+  "product": "consumer_account",
+  "process": "identity_checks",
+  "version": "1",
+  "status": "approved",
+  "effective_from": "2026-10-01",
+  "effective_to": null,
+  "owner": "Fictional Telecom Knowledge Team",
+  "review_date": "2027-01-01",
+  "synthetic": true,
+  "disclaimer": "FICTIONAL TRAINING CONTENT. Created for Fictional Telecom Lab; does not represent any real provider or legal requirement. Knowledge guidance only; no customer actions can be performed.",
+  "sections": [
+    {
+      "section_id": "training_id",
+      "heading": "Training identification",
+      "text": "In this demonstration, use an unexpired Fictional Training ID card whose name matches the fictional account record. This invented card is only a teaching prop; no actual identity document or personal details should be entered into the application."
+    },
+    {
+      "section_id": "exceptions",
+      "heading": "Missing or mismatched details",
+      "text": "If the training card is expired, missing or has a different name, the authorised colleague must refer the case to the Fictional Identity Review Team. The copilot cannot verify identity or invent an alternative document requirement."
+    },
+    {
+      "section_id": "authority",
+      "heading": "Identity and authority are different",
+      "text": "Establishing who someone is does not establish which account actions they may request. Consult AUTH-1001 separately for authority. This fictional procedure is not a legal or regulatory determination."
+    }
+  ]
+}

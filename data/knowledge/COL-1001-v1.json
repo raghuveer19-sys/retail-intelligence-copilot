@@ -1,0 +1,34 @@
+{
+  "document_id": "COL-1001-v1",
+  "policy_id": "COL-1001",
+  "title": "Click-and-collect guidance",
+  "category": "click_and_collect",
+  "customer_segment": "consumer",
+  "product": "retail_order",
+  "process": "order_collection",
+  "version": "1",
+  "status": "approved",
+  "effective_from": "2026-10-01",
+  "effective_to": null,
+  "owner": "Fictional Telecom Knowledge Team",
+  "review_date": "2027-01-01",
+  "synthetic": true,
+  "disclaimer": "FICTIONAL TRAINING CONTENT. Created for Fictional Telecom Lab; does not represent any real provider or legal requirement. Knowledge guidance only; no customer actions can be performed.",
+  "sections": [
+    {
+      "section_id": "collection",
+      "heading": "Collection prerequisites",
+      "text": "In this demonstration, the named collector must bring the collection notice and an unexpired Fictional Training ID card matching the collector name. An authorised colleague checks these through the fictional order workflow; do not paste notice codes or identity details into chat."
+    },
+    {
+      "section_id": "window",
+      "heading": "Collection window",
+      "text": "The fictional collection window is 7 calendar days from the ready-for-collection notice. If the window has passed, refer to the Fictional Order Support Team; the copilot cannot extend it or confirm live stock."
+    },
+    {
+      "section_id": "alternate",
+      "heading": "Another person collecting",
+      "text": "This document does not define substitute-collector authorisation. If someone asks to collect another person's order, say the approved evidence is insufficient and consult the policy owner. Do not invent permission or a prohibition."
+    }
+  ]
+}

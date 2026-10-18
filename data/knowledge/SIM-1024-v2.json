@@ -1,0 +1,34 @@
+{
+  "document_id": "SIM-1024-v2",
+  "policy_id": "SIM-1024",
+  "title": "SIM replacement",
+  "category": "sim_replacement",
+  "customer_segment": "consumer",
+  "product": "physical_sim",
+  "process": "sim_replacement",
+  "version": "2",
+  "status": "approved",
+  "effective_from": "2026-10-01",
+  "effective_to": null,
+  "owner": "Fictional Telecom Knowledge Team",
+  "review_date": "2027-01-01",
+  "synthetic": true,
+  "disclaimer": "FICTIONAL TRAINING CONTENT. Created for Fictional Telecom Lab; does not represent any real provider or legal requirement. Knowledge guidance only; no customer actions can be performed.",
+  "sections": [
+    {
+      "section_id": "appointments",
+      "heading": "Appointments and scope",
+      "text": "For this fictional consumer service, a physical SIM replacement does not require an appointment. An optional booking may help plan a visit. A lost, stolen or damaged SIM can be discussed with an authorised store colleague; this guidance does not itself replace or deactivate a SIM."
+    },
+    {
+      "section_id": "checks",
+      "heading": "Required checks",
+      "text": "Before any replacement, an authorised colleague must follow IDV-1001 for identity requirements and AUTH-1001 for account authority. A bill or knowledge of a phone number is not evidence of authority. If either policy is absent from the retrieved evidence, the copilot cannot confirm eligibility."
+    },
+    {
+      "section_id": "esim",
+      "heading": "Choosing physical SIM or eSIM",
+      "text": "For a digital SIM, use ESIM-1001 to check device readiness. The same identity and authority requirements still apply. The copilot cannot issue activation codes or promise an activation time."
+    }
+  ]
+}

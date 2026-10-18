@@ -1,0 +1,88 @@
+/* Native Streamlit controls with scoped styling for the approved chat design. */
+.stMainBlockContainer { max-width: 900px; padding-top: 2rem; }
+.st-key-brand {
+    border-top: 4px solid #0b8e83;
+    border-radius: 16px;
+    padding: 1.4rem 1.6rem;
+    background: linear-gradient(120deg, #173f4b, #176960);
+    color: #fff;
+}
+.st-key-brand h1 { color: #fff; font-size: 1.8rem; letter-spacing: -.035em; padding: 0; }
+.st-key-brand [data-testid="stCaptionContainer"],
+.st-key-brand [data-testid="stCaptionContainer"] p { color: #e2f1f0; }
+.st-key-chat_navigation { padding-top: .3rem; }
+.st-key-welcome { margin: 2.6rem 0 .8rem; }
+.st-key-welcome h2 { letter-spacing: -.03em; font-size: 2rem; }
+.st-key-starters { margin-bottom: 1.8rem; }
+.st-key-starters button {
+    min-height: 76px;
+    border-radius: 14px;
+    border: 1px solid #98b5b3;
+    box-shadow: 0 3px 10px #153c4b0c;
+}
+.st-key-starters button:hover { border-color: #08776f; }
+.st-key-starters [data-testid="stCaptionContainer"] { padding: .2rem .2rem 0; }
+.st-key-chat_thread [data-testid="stChatMessage"] {
+    border-radius: 16px 16px 16px 5px;
+    padding: 1.25rem;
+    margin-bottom: .6rem;
+    border: 1px solid #98b5b366;
+}
+[class*="st-key-user_"] [data-testid="stChatMessage"] {
+    background: #173f4b;
+    color: #fff;
+    border-radius: 16px 16px 5px 16px;
+    margin-left: auto;
+    max-width: 88%;
+}
+/* st.text's child span owns its colour; changing only the wrapper is insufficient. */
+[class*="st-key-user_"] [data-testid="stText"],
+[class*="st-key-user_"] [data-testid="stText"] > span { color: #fff; }
+[data-testid="stChatMessage"] [data-testid="stText"] {
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.65;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+[data-testid="stChatMessage"] [data-testid="stText"] > span {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    min-width: 0;
+    max-width: 100%;
+}
+[data-testid="stChatInput"] {
+    border-radius: 16px;
+    box-shadow: 0 5px 18px #153c4b10;
+}
+[data-testid="stChatInput"] > div { background: #fff; color: #18333d; }
+textarea[data-testid="stChatInputTextArea"] {
+    color: #18333d;
+    -webkit-text-fill-color: #18333d;
+    caret-color: #08776f;
+}
+textarea[data-testid="stChatInputTextArea"]::placeholder {
+    color: #526b76;
+    -webkit-text-fill-color: #526b76;
+    opacity: 1;
+}
+@media (max-width: 640px) {
+    .stMainBlockContainer { padding: 1rem; }
+    .st-key-brand { padding: 1.2rem; }
+    .st-key-welcome { margin-top: 1.5rem; }
+    .st-key-welcome h2 { font-size: 1.7rem; }
+    .st-key-starters [data-testid="stHorizontalBlock"] {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    }
+    .st-key-starters [data-testid="stHorizontalBlock"] > [data-testid="stColumn"] {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        flex: 0 0 auto;
+    }
+    .st-key-starters button { min-height: 56px; }
+    [class*="st-key-user_"] [data-testid="stChatMessage"] { max-width: 95%; }
+}

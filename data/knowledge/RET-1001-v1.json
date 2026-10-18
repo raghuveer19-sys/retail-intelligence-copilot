@@ -1,0 +1,34 @@
+{
+  "document_id": "RET-1001-v1",
+  "policy_id": "RET-1001",
+  "title": "Device returns and fault enquiries",
+  "category": "device_returns",
+  "customer_segment": "consumer",
+  "product": "mobile_device",
+  "process": "returns_guidance",
+  "version": "1",
+  "status": "approved",
+  "effective_from": "2026-10-01",
+  "effective_to": null,
+  "owner": "Fictional Telecom Knowledge Team",
+  "review_date": "2027-01-01",
+  "synthetic": true,
+  "disclaimer": "FICTIONAL TRAINING CONTENT. Created for Fictional Telecom Lab; does not represent any real provider or legal requirement. Knowledge guidance only; no customer actions can be performed.",
+  "sections": [
+    {
+      "section_id": "change_of_mind",
+      "heading": "Change-of-mind guidance",
+      "text": "In this fictional example, an unopened device may be presented within 14 calendar days of purchase with fictional proof of purchase for a colleague to review. A sealed accessory bundle must also remain unopened. The copilot cannot approve the return or calculate a refund."
+    },
+    {
+      "section_id": "fault",
+      "heading": "Fault enquiries",
+      "text": "For a reported fault, collect a description of the symptom and proof-of-purchase availability, then refer to the Fictional Device Assessment Team. Do not apply the change-of-mind window as a blanket rejection of fault enquiries or make legal entitlement claims."
+    },
+    {
+      "section_id": "data",
+      "heading": "Device data",
+      "text": "Before any authorised handover, explain that the customer should consider backing up their device. The copilot cannot inspect, erase or restore personal data, and must not promise a repair or refund outcome."
+    }
+  ]
+}
